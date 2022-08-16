@@ -74,3 +74,11 @@ end)
 VSection:NewButton("Da Hood Version", "The Da Hood version of Ferret Hub.", function()
     local DHWindow = Library.CreateLib("Ferret Hub | Da Hood", "BloodTheme")
 end)
+
+FSection:NewButton("Teleport", " ", function()
+    FSection:NewTextBox("Player to teleport to", " ", function(txt)
+        if game.Workspace:WaitForChild(txt.Name) then
+             Character.HumanoidRootPart.CFrame = game.Workspace:WaitForChild(txt.Name).HumanoidRootPart.CFrame 
+        end
+end)
+end)
